@@ -398,7 +398,7 @@ TU_VERIFY_STATIC( sizeof(video_probe_and_commit_control_t) == 48, "size is not c
   _nEPs, TUSB_CLASS_VIDEO, VIDEO_SUBCLASS_CONTROL, VIDEO_ITF_PROTOCOL_15, _stridx
 
 /* 3.7.2 */
-#define TUD_VIDEO_DESC_CS_VC(_bcdUVC, _totallen, _clkfreq, ...)	\
+#define TUD_VIDEO_DESC_CS_VC(_bcdUVC, _totallen, _clkfreq, ...) \
   TUD_VIDEO_DESC_CS_VC_LEN + (TU_ARGS_NUM(__VA_ARGS__)), TUSB_DESC_CS_INTERFACE, VIDEO_CS_ITF_VC_HEADER, \
   U16_TO_U8S_LE(_bcdUVC), U16_TO_U8S_LE((_totallen) + TUD_VIDEO_DESC_CS_VC_LEN + (TU_ARGS_NUM(__VA_ARGS__))), \
   U32_TO_U8S_LE(_clkfreq), TU_ARGS_NUM(__VA_ARGS__), __VA_ARGS__

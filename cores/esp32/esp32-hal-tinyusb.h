@@ -81,6 +81,7 @@ void usb_persist_restart(restart_type_t mode);
 
 // The following definitions and functions are to be used only by the drivers
 typedef enum {
+    USB_INTERFACE_VIDEO,
     USB_INTERFACE_MSC,
     USB_INTERFACE_DFU,
     USB_INTERFACE_HID,
